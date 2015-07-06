@@ -15,6 +15,7 @@ use ZF\MvcAuth\MvcAuthEvent;
 use Authogility\MvcAuth\Authorization\DefaultAuthorizationListener;
 use Authogility\MvcAuth\Authentication\UnauthenticatedListener;
 use Authogility\MvcAuth\Authorization\UnauthorizedListener;
+use Authogility\MvcAuth\Authentication\IdentityPostAuthenticationListener;
 use Authogility\Identity\UserEntityInterface;
 use Authogility\Exception;
 
