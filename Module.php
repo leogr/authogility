@@ -47,7 +47,7 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
 
         if (!$userEntityService instanceof UserEntityServiceInterface) {
             throw new Exception\RuntimeException(sprintf(
-                '"user_entity_service" must be an instance of "%s", given "%"',
+                '"user_entity_service" must be an instance of "%s", given "%s"',
                 UserEntityServiceInterface::class,
                 is_object($userEntityService) ? get_class($userEntityService) : gettype($userEntityService)
             ));
