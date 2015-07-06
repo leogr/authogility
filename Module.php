@@ -16,6 +16,7 @@ use Authogility\MvcAuth\Authorization\DefaultAuthorizationListener;
 use Authogility\MvcAuth\Authentication\UnauthenticatedListener;
 use Authogility\MvcAuth\Authorization\UnauthorizedListener;
 use Authogility\Identity\UserEntityInterface;
+use Authogility\Exception;
 
 /**
  * Class Module
@@ -35,7 +36,7 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
         $config = $serviceManager->get('Config');
 
         if (empty($config['authogility']['user_entity_service'])) {
-            throw new RuntimeException(sprintf(
+            throw new Exception\RuntimeException(sprintf(
                 '"user_entity_service" configuration node must be set'
             ));
         }
@@ -43,7 +44,7 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
         $userEntityService = $serviceManager->get($config['authogility']['user_entity_service']);
 
         if (!$userEntityService instanceof UserEntityInterface) {
-            throw new RuntimeException(sprintf(
+            throw new Exception\RuntimeException(sprintf(
                 '"user_entity_service" must be an instance of "%s"',
                 UserEntityInterface::class
             ));
