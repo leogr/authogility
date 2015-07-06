@@ -27,11 +27,30 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
 {
 
     /**
+     * @var bool
+     */
+    protected static $registerDefaultListeners = true;
+
+
+    /**
+     * @param bool $enable
+     */
+    public static function setRegisterDefaultListeners($enable = true)
+    {
+        static::$registerDefaultListeners = (bool) $enable;
+    }
+
+
+    /**
      * @param MvcEvent $e
      * @throws RuntimeException
      */
     public function onBootstrap(MvcEvent $e)
     {
+
+        if (!static::$registerDefaultListeners) {
+            return;
+        }
 
         $serviceManager = $e->getApplication()->getServiceManager();
         $config = $serviceManager->get('Config');
