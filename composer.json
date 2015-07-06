@@ -33,7 +33,10 @@
     "psr-4": {
       "Authogility\\": "src/",
       "AuthogilityTest\\": "tests/"
-    }
+    },
+    "classmap": [
+      "./Module.php"
+    ]
   },
   "keywords": [
     "apigility",
