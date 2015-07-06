@@ -26,7 +26,6 @@ use Authogility\Identity\UserEntityServiceInterface;
 class Module implements AutoloaderProviderInterface, ConfigProviderInterface
 {
 
-
     /**
      * @param MvcEvent $e
      * @throws RuntimeException
@@ -52,6 +51,8 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
                 is_object($userEntityService) ? get_class($userEntityService) : gettype($userEntityService)
             ));
         }
+
+        $events = $e->getApplication()->getEventManager();
 
         // Setup user identity
         // Attach with high priority before anyone else in ZF\MvcAuth\Module
