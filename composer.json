@@ -5,6 +5,8 @@
   "license": "BSD-3-Clause",
   "require": {
     "php": ">=5.5.0",
+    "zendframework/zend-mvc": "2.*",
+    "zendframework/zend-modulemanager": "2.*",
     "zfcampus/zf-mvc-auth": "~1.1.0",
     "zfcampus/zf-content-validation": "~1.1.0",
     "ripaclub/aclman": "~0.2.0"
@@ -29,7 +31,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Authogility\\": "library/",
+      "Authogility\\": "src/",
       "AuthogilityTest\\": "tests/"
     }
   },
