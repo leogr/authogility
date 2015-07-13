@@ -74,7 +74,7 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
         $events = $e->getApplication()->getEventManager();
 
         // Setup user identity
-        // Attach with high priority before anyone else in ZF\MvcAuth\Module
+        // Attach with higher priority than ZF\MvcAuth\Module listeners
         $events->attach(MvcAuthEvent::EVENT_AUTHENTICATION_POST, new IdentityPostAuthenticationListener($userEntityService), 1000);
 
         // Setup user ACL
