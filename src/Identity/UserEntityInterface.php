@@ -10,5 +10,4 @@ namespace Authogility\Identity;
 
 interface UserEntityInterface
 {
-
 }

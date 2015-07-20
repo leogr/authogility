@@ -10,5 +10,4 @@ namespace Authogility\Exception;
 
 interface ExceptionInterface
 {
-
 }
