@@ -1,6 +1,6 @@
 {
   "name": "ripaclub/authogility",
-  "description": "",
+  "description": "Automatic OAuth2 Authentication, Authorization, and Accounting with Apigility",
   "minimum-stability": "stable",
   "license": "BSD-3-Clause",
   "require": {

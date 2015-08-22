@@ -16,4 +16,3 @@ interface UserEntityServiceInterface
      */
     public function getUserByIdentity($identity);
 }
-

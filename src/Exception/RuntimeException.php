@@ -10,5 +10,4 @@ namespace Authogility\Exception;
 
 class RuntimeException extends \RuntimeException implements ExceptionInterface
 {
-
 }
