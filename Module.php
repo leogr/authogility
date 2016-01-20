@@ -17,6 +17,7 @@ use Authogility\MvcAuth\Authorization\UnauthorizedListener;
 use Authogility\MvcAuth\Authentication\IdentityPostAuthenticationListener;
 use Authogility\Exception;
 use Authogility\Identity\UserEntityServiceInterface;
+use Authogility\Mvc\ResponseListener;
 
 /**
  * Class Module
@@ -78,6 +79,9 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
         // Setup user ACL
         $events->attach(MvcAuthEvent::EVENT_AUTHORIZATION, new DefaultAuthorizationListener, 999); // After resolver
         $events->attach(MvcAuthEvent::EVENT_AUTHORIZATION_POST, new UnauthorizedListener, 100);
+        
+        // Handling errors within the response, if any
+        $events->attach(MvcEvent::EVENT_FINISH, new ResponseListener, 1000);
     }
 
 
