@@ -13,10 +13,8 @@ use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Zend\Mvc\MvcEvent;
 use ZF\MvcAuth\MvcAuthEvent;
 use Authogility\MvcAuth\Authorization\DefaultAuthorizationListener;
-use Authogility\MvcAuth\Authentication\UnauthenticatedListener;
 use Authogility\MvcAuth\Authorization\UnauthorizedListener;
 use Authogility\MvcAuth\Authentication\IdentityPostAuthenticationListener;
-use Authogility\Identity\UserEntityInterface;
 use Authogility\Exception;
 use Authogility\Identity\UserEntityServiceInterface;
 
@@ -79,7 +77,6 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
 
         // Setup user ACL
         $events->attach(MvcAuthEvent::EVENT_AUTHORIZATION, new DefaultAuthorizationListener, 999); // After resolver
-        $events->attach(MvcAuthEvent::EVENT_AUTHENTICATION_POST, new UnauthenticatedListener, 100);
         $events->attach(MvcAuthEvent::EVENT_AUTHORIZATION_POST, new UnauthorizedListener, 100);
     }
 
