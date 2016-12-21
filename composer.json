@@ -1,5 +1,5 @@
 {
-  "name": "ripaclub/authogility",
+  "name": "leogr/authogility",
   "description": "Automatic OAuth2 Authentication, Authorization, and Accounting with Apigility",
   "minimum-stability": "stable",
   "license": "BSD-3-Clause",
@@ -22,10 +22,6 @@
     {
       "name": "Leo Di Donato",
       "email": "leodidonato@gmail.com"
-    },
-    {
-      "name": "Antonio Visalli",
-      "email": "antonino.visalli@gmail.com"
     }
   ],
   "autoload": {
