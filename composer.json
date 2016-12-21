@@ -8,8 +8,7 @@
     "zendframework/zend-mvc": "2.*",
     "zendframework/zend-modulemanager": "2.*",
     "zfcampus/zf-mvc-auth": "~1.3.0",
-    "zfcampus/zf-content-validation": "~1.2.0",
-    "ripaclub/aclman": "~0.2.0"
+    "zfcampus/zf-content-validation": "~1.2.0"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.4",

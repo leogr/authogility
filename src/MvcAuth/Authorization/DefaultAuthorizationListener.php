@@ -8,7 +8,6 @@
  */
 namespace Authogility\MvcAuth\Authorization;
 
-use AclMan\Service\ServiceImplement as AclManager;
 use ZF\MvcAuth\Identity\IdentityInterface;
 use ZF\MvcAuth\MvcAuthEvent;
 
@@ -36,10 +35,6 @@ class DefaultAuthorizationListener
         $acl = $services->get('authorization');
         $acl->deny(); // Deny by default for all roles
 
-        /* @var $aclManager \AclMan\Service\Service */
-        $aclManager = $services->get('Authogility\MvcAuth\Authorization\AclManager');
-
-        $aclManager->setAcl($acl);
-        $aclManager->loadResource($identity, $mvcAuthEvent->getResource());
+        // TODO: lazy load ACL per identity
     }
 }
