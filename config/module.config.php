@@ -5,16 +5,6 @@ return [
 
     ],
 
-    'service_manager' => [
-        'abstract_factories' => [
-            'AclMan\Service\ServiceFactory',
-            'AclMan\Storage\StorageFactory',
-        ],
-        'factories' => [
-            'AclMan\Assertion\AssertionManager' => 'AclMan\Assertion\AssertionManagerFactory',
-        ]
-    ],
-
     'zf-oauth2' => [
         // https://apigility.org/documentation/auth/authentication-oauth2
         'options' => [
@@ -34,19 +24,6 @@ return [
                 ],
             ],
         ]
-    ],
-
-    'aclman_services' => [
-        'Authogility\MvcAuth\Authorization\AclManager' => [
-            'storage' => 'Authogility\MvcAuth\Authorization\AclManager\Storage',
-            'plugin_manager' => 'AclMan\Assertion\AssertionManager',
-            'allow_not_found_resource' => false,
-        ],
-    ],
-
-    'aclman_storage' => [
-        'Authogility\MvcAuth\Authorization\AclManager\Storage' => [
-         ],
     ],
 
 ];

@@ -1,5 +1,5 @@
 {
-  "name": "ripaclub/authogility",
+  "name": "leogr/authogility",
   "description": "Automatic OAuth2 Authentication, Authorization, and Accounting with Apigility",
   "minimum-stability": "stable",
   "license": "BSD-3-Clause",
@@ -8,8 +8,7 @@
     "zendframework/zend-mvc": "2.*",
     "zendframework/zend-modulemanager": "2.*",
     "zfcampus/zf-mvc-auth": "~1.3.0",
-    "zfcampus/zf-content-validation": "~1.2.0",
-    "ripaclub/aclman": "~0.2.0"
+    "zfcampus/zf-content-validation": "~1.2.0"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.4",
@@ -23,10 +22,6 @@
     {
       "name": "Leo Di Donato",
       "email": "leodidonato@gmail.com"
-    },
-    {
-      "name": "Antonio Visalli",
-      "email": "antonino.visalli@gmail.com"
     }
   ],
   "autoload": {
